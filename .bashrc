@@ -5,7 +5,7 @@
 # that can't tolerate any output.  So make sure this doesn't display
 # anything or bad things will happen !
 
-PATH=${PATH}:${HOME}/minecraft:${HOME}/scripts
+PATH=${PATH}:${HOME}/scripts
 
 export EDITOR="vim"
 
