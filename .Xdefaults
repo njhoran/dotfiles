@@ -1,4 +1,4 @@
-urxvt*geometry:		110x28
+urxvt*geometry:     110x28
 urxvt*saveLines:    12000
 urxvt*background:	#1D1D1D
 urxvt*foreground:	#C4C0AB
@@ -6,15 +6,10 @@ urxvt*depth:		32
 urxvt*background:	rgba:1111/1111/1111/dddd
 
 
-urxvt*font:		xft:dina:pixelsize=10:antialias=true:autohinting=true
+urxvt*font:		    xft:dina:pixelsize=10:antialias=true:autohinting=true
 urxvt*boldFont:		xft:dina:pixelsize=10:antialias=true:autohinting=true
-!urxvt*font:		xft:terminus:pixelsize=10:antialias=true
-!urxvt*boldFont:		xft:terminus:pixelsize=10:antialias=true
-!urxvt*italicFont:	xft:DejaVu Sans Mono:style=italic:antialias:true:pixelsize=11
-!urxvt*boldItalicFont:	xft:DejaVu Sans Mono:tyle=bolditalic:antialias=true:pixelsize=11
-!urxvt*xftAutoHint:	true
 Xft.dpi:	     	96
-Xft.antialias:	      true
+Xft.antialias:	    true
 Xft.rgba:		    rgb
 Xft.hinting:		true
 Xft.hintstyle:		hintslight
@@ -46,8 +41,6 @@ urxvt*color15:		#C0C0C0
 
 
 ## transparency
-##urxvt*inheritPixmap: true
-##urxvt*tintColor: black
 urxvt*shading: 20
 urxvt*transparent: true
 
