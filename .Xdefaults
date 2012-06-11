@@ -1,19 +1,16 @@
-urxvt*geometry:     110x28
-urxvt*saveLines:    12000
-urxvt*background:	#1D1D1D
+urxvt*geometry:     	110x28
+urxvt*saveLines:    	12000
 urxvt*foreground:	#C4C0AB
 urxvt*depth:		32
 urxvt*background:	rgba:1111/1111/1111/dddd
 
-
-urxvt*font:		    xft:dina:pixelsize=10:antialias=true:autohinting=true
+urxvt*font:		xft:dina:pixelsize=10:antialias=true:autohinting=true
 urxvt*boldFont:		xft:dina:pixelsize=10:antialias=true:autohinting=true
 Xft.dpi:	     	96
-Xft.antialias:	    true
-Xft.rgba:		    rgb
+Xft.antialias:	    	true
+Xft.rgba:		rgb
 Xft.hinting:		true
 Xft.hintstyle:		hintslight
-
 
 ! original scheme
 !black
@@ -44,39 +41,38 @@ Xft.hintstyle:		hintslight
 
 ! scheme added 06/09/2012
 
-! ! Black + DarkGrey
+! Black + DarkGrey
 *color0:                        #262626
 *color8:                        #73675b
-! ! DarkRed + Red
+! DarkRed + Red
 *color1:                        #a64211
 *color9:                        #cc5214
-! ! DarkGreen + Green
+! DarkGreen + Green
 *color2:                        #638046
 *color10:                       #80a65b
-! ! DarkYellow + Yellow
+! DarkYellow + Yellow
 *color3:                        #bf8c25
 *color11:                       #e6a82d
-! ! DarkBlue + Blue
+! DarkBlue + Blue
 *color4:                        #4d6d99
 *color12:                       #6088bf
-! ! DarkMangenta + Mangenta
+! DarkMangenta + Mangenta
 *color5:                        #996b89
 *color13:                       #bf86ac
-! ! DarkCyan + Cyan
+! DarkCyan + Cyan
 *color6:                        #6b8e99
 *color14:                       #86b1bf
-! ! LightGrey + White
+! LightGrey + White
 *color7:                        #998a7a
 *color15:                       #c2c2b0
 
 
-
-## transparency
+! transparency
 urxvt*shading: 20
 urxvt*transparent: true
 
 
-## borderless, no scrollbar
+! borderless, no scrollbar
 urxvt*scrollBar_right: false
 urxvt*scrollBar: false
 urxvt*borderLess: false
