@@ -5,7 +5,7 @@
 # that can't tolerate any output.  So make sure this doesn't display
 # anything or bad things will happen !
 
-PATH=${PATH}:${HOME}/scripts
+PATH=${PATH}:${HOME}/minecraft:${HOME}/scripts
 
 export EDITOR="vim"
 
@@ -63,10 +63,16 @@ if ${use_color} ; then
 		fi
 	fi
 
+    # if connected via SSH, add ssh_label to the prompt
+    if [ -n "$SSH_CLIENT" ]; then 
+        ssh_label="ssh - "
+    fi
+
+    # if root, prompt is a different color
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+		PS1='${ssh_label}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+		PS1='${ssh_label}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 	fi
 
 	alias ls='ls --color=auto'
