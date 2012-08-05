@@ -1,4 +1,4 @@
--- Current config file working as of 12/07/2011
+-- Current config file working as of 08/05/2012
 
 -- Standard awesome library
 require("awful")
@@ -93,8 +93,8 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "urxvt terminal", terminal },
-                                    { "gVim editor", "gvim" },
                                     { "vim editor", terminal .. " -e vim" },
+                                    { "leafpad", "leafpad" },
                                     { "code::blocks", "codeblocks" },
                                     { "python2", terminal .. " -e python2" },
                                     { "python3", terminal .. " -e python3" },
@@ -104,6 +104,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "weechat", terminal .. " -e weechat-curses" },
                                     { "virtualbox", "VirtualBox" },
                                     { "gimp", "gimp"},
+                                    { "firefox", "firefox" },
                                     { "chromium", "chromium --user-data-dir --enable-sync" },
                                     { "chromium-tor", "chromium-tor.sh" },
                                   }
@@ -115,7 +116,7 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 
 -- {{{ Wibox
 
--- network usage widget 
+-- network usage widget
 
 netwidget = widget({ type = "textbox" })
 vicious.register(netwidget, vicious.widgets.net, ' <span color="#404040">down:</span><span color="#CC9393">${eth0 down_kb}</span> <span color="#404040">up:</span><span color="#7F9F7F">${eth0 up_kb}</span> ', 3)
@@ -293,8 +294,7 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
-    -- Run Prompt
-    -- commented out
+    -- Run Prompt - commented out since I never use
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     awful.key({ modkey }, "x",
