@@ -1,7 +1,7 @@
 syntax on
 filetype indent plugin on
 colorscheme xoria256
-let g:pydiction_location = '~/.vim/pydiction/complete-dict'
+" let g:pydiction_location = '~/.vim/pydiction/complete-dict'
 set t_Co=256
 set modeline
 set nu
