@@ -28,3 +28,7 @@ vnoremap > >gv
 " place a line at 80 columns:
 set colorcolumn=80
 highlight colorcolumn ctermbg=233
+" auto-reload vimrc after it's saved
+au BufWritePost .vimrc so ~/.vimrc
+" Always open files in new tab with MRU
+let MRU_Open_File_Use_Tabs=1
