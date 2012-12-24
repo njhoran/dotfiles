@@ -1,7 +1,9 @@
 syntax on
 filetype indent plugin on
 colorscheme xoria256
-" let g:pydiction_location = '~/.vim/pydiction/complete-dict'
+"" let g:pydiction_location = '~/.vim/pydiction/complete-dict'
+" Enable Pathogen
+call pathogen#infect()
 set t_Co=256
 set modeline
 set nu
@@ -19,7 +21,15 @@ set sts=4
 set nowrap
 set expandtab
 set mouse=a
+set bs=2
 set clipboard=unnamed
+" always enable statusline (for powerline)
+set laststatus=2
+" set encoding (for powerline)
+set encoding=utf-8
+" set powerline theme
+"" let g:Powerline_theme = 'default'
+"" let g:Powerline_colorscheme = 'default'
 " disable recording:
 map q <Nop>
 " better indentation (doesn't lose selection):
