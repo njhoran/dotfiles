@@ -1,7 +1,6 @@
 syntax on
 filetype indent plugin on
 colorscheme xoria256
-"" let g:pydiction_location = '~/.vim/pydiction/complete-dict'
 " Enable Pathogen
 call pathogen#infect()
 set t_Co=256
