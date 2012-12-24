@@ -110,12 +110,12 @@ endfunction
 " ------------------------------------------------------------------------
 function! jedi#new_buffer(path)
     if g:jedi#use_tabs_not_buffers
-        python jedi_vim.tabnew(vim.eval('a:path'))
+        python jedi_vim.tabnew(jedi_vim.escape_file_path(vim.eval('a:path')))
     else
         if !&hidden && &modified
             w
         endif
-        execute 'edit '.a:path
+        python vim.execute('edit ' + vim.eval(jedi_vim.escape_file_path(vim.eval('a:path'))))
     endif
 endfunction
 
@@ -138,7 +138,7 @@ function! jedi#goto_window_on_enter()
     if l:data.bufnr
         " close goto_window buffer
         normal ZQ
-        python jedi_vim.tabnew(vim.eval("bufname(l:data.bufnr)"))
+        jedi#new_buffer(bufname(l:data.bufnr))
         call cursor(l:data.lnum, l:data.col)
     else
         echohl WarningMsg | echo "Builtin module cannot be opened." | echohl None
