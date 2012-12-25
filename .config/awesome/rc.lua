@@ -1,4 +1,4 @@
--- Current config file working as of 08/05/2012
+-- Current config file working as of 12/07/2011
 
 -- Standard awesome library
 require("awful")
@@ -38,7 +38,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/username/.config/awesome/themes/default/theme.lua")
+beautiful.init("/home/$USER/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -220,8 +220,8 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
-        cpugraph.widget, -- vicious widget
-        netwidget, -- vicious widget
+        cpugraph.widget, -- vicious widget added by 
+        netwidget, -- vicious widget added by 
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -294,7 +294,8 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
-    -- Run Prompt - commented out since I never use
+    -- Run Prompt
+    -- commented out by 
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     awful.key({ modkey }, "x",
