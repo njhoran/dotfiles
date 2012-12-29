@@ -31,11 +31,11 @@ set bs=2                    " give us a regular working backspace
 set clipboard=unnamed       " use system clipboard by default
 set laststatus=2            " always enable statusline (powerline)
 set encoding=utf-8          " force encoding to utf-8 (powerline)
-set colorcolumn=80          " put a dark gray line at column 80. Because going past 80 chars, like I am right now, is bad, bad, bad!
+set colorcolumn=80          " put a dark gray line at column 80. Because going past 80 chars, like I am now, is bad.
 highlight colorcolumn ctermbg=233
 
 vnoremap < <gv              " better unindenting (don't lose selection)
-vnoremap > >gv              " better indenting
+vnoremap > >gv              " better indenting (ditto)
 
 autocmd BufWritePre *.py :%s/\s\+$//e   " remove trailing whitespace on .py files
 
