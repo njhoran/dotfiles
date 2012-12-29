@@ -26,12 +26,12 @@ set showcmd                 " show incomplete command on status bar
 "" set smartindent          " do smart indenting when starting new line
 "" map q <Nop>              " disable recording
 set nowrap                  " do not wrap text
-set mouse=a                 " make mouse selections behave (but seriously, don't use a mouse.)
+set mouse=a                 " make mouse behave (seriously, don't use a mouse.)
 set bs=2                    " give us a regular working backspace
 set clipboard=unnamed       " use system clipboard by default
 set laststatus=2            " always enable statusline (powerline)
 set encoding=utf-8          " force encoding to utf-8 (powerline)
-set colorcolumn=80          " put a dark gray line at column 80. Because going past 80 chars, like I am now, is bad.
+set colorcolumn=80          " put an ominous gray line at column 80. 
 highlight colorcolumn ctermbg=233
 
 vnoremap < <gv              " better unindenting (don't lose selection)
