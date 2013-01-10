@@ -1,59 +1,92 @@
 " ===========================
-" Ed Burnett's .vimrc
+" Edmond Burnett's .vimrc
 " http://github.com/edburnett
 " ===========================
 
-call pathogen#infect()      " enable Pathogen
-syntax on                   " enable syntax highlighting
-filetype indent plugin on   " enable file type determination
-colorscheme xoria256        " set color scheme
- 
-set t_Co=256                " 256 colors
-set modeline                " Yeah, so... I forget what this does.
-set nu                      " enable line numbers
-set nocompatible            " do not run in vi compatibility mode (yuck)
-set autoindent              " autoindenting on
-set ic                      " ignore case in search patterns
-set hls                     " highlight search matches
-set nobackup                " don't create backup files
-set showmatch               " show matching brackets/parens
-set ignorecase              " ignore case in normal letters 
-set expandtab               " expand tabs to spaces
-set ts=4                    " 4-space tabs? everyone loves those. 
-set sw=4                    " shift width or something. whatever.
-set sts=4                   " make expanded spaces behave like tabs
-set showcmd                 " show incomplete command on status bar
-"" set smartindent          " do smart indenting when starting new line
-"" map q <Nop>              " disable recording
-set nowrap                  " do not wrap text
-set mouse=a                 " make mouse behave (seriously, don't use a mouse.)
-set bs=2                    " give us a regular working backspace
-set clipboard=unnamed       " use system clipboard by default
-set laststatus=2            " always enable statusline (powerline)
-set encoding=utf-8          " force encoding to utf-8 (powerline)
-set colorcolumn=80          " put an ominous gray line at column 80. 
+" enable Pathogen plugin
+call pathogen#infect()      
+" enable syntax highlighting
+syntax on
+" enable file type determination
+filetype indent plugin on
+" set colour scheme
+colorscheme xoria256
+" 256 colors
+set t_Co=256
+" Yeah, so... I forget what this does
+set modeline
+" enable line numbers
+set nu
+" do not run in vi compatibility mode (yuck)
+set nocompatible
+" autoindenting on
+set autoindent
+" ignore case in search patterns
+set ic
+" highlight search matches
+set hls
+" don't create backup files
+set nobackup
+" show matching brackets/parens
+set showmatch
+" ignore case in normal letters
+set ignorecase
+" expand tabs to spaces
+set expandtab
+" 4-space tabs? everyone loves those
+set ts=4
+" shift width
+set sw=4
+" makes expanded spaces behave like tabs
+set sts=4
+" show current incomplete command on status bar
+set showcmd
+" do not wrap text
+set nowrap
+" make mouse behave (but seriously, don't use a mouse)
+set mouse=a
+" give us a regular-behaving backspace
+set bs=2
+" use system clipboard by default
+set clipboard=unnamed
+" always enable statusline (powerline plugin)
+set laststatus=2
+" force encoding to utf-8 (powerline plugin)
+set encoding=utf-8
+" put an ominous gray/#233 line at column 80
+set colorcolumn=80
 highlight colorcolumn ctermbg=233
+" remove trailing whitespace in .py files
+autocmd BufWritePre *.py :%s/\s\+$//e
+" auto-reload .vimrc on save
+"" au BufWritePost .vimrc so ~/.vimrc
+" open files in new tab (MRU plugin)
+let MRU_Open_File_Use_Tabs=1
+" remap the leader key
+let mapleader = ','
 
-autocmd BufWritePre *.py :%s/\s\+$//e   " remove trailing whitespace on .py files
-
-"" au BufWritePost .vimrc so ~/.vimrc   " auto-reload .vimrc on save
-let MRU_Open_File_Use_Tabs=1            " open files in new tabs in MRU
-
-let mapleader = ","         " remap the leader key
 
 " =============
 " Leader macros
 " =============
-map <Leader>v :tabe ~/.vimrc<cr>    " open .vimrc in a new tab
-map <Leader>gs :Gstatus<cr>         " get git status (fugitive plugin)
-map <Leader>n :NERDTree<cr>         " open Nerdtree
+
+" open .vimrc in a new tab
+map <Leader>v :tabe ~/.vimrc<cr>
+" retrieve git status of current repo (fugitive plugin)
+map <Leader>gs :Gstatus<cr>
+" open NERDTree (plugin)
+map <Leader>n :NERDTree<cr>
+
 
 " ==============
 " Key remappings
 " ==============
-vnoremap < <gv              " better unindenting (don't lose selection)
-vnoremap > >gv              " better indenting (ditto)
-map <up> <nop>              " disable up arrow key
-map <down> <nop>            " disable down arrow key
-map <left> <nop>            " disable left arrow key
-map <right> <nop>           " disable right arrow key
+
+" better indenting in visual mode (doesn't lose selection)
+vnoremap < <gv
+vnoremap > >gv
+" disable arrow keys in normal & visual mode 
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
