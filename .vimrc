@@ -34,14 +34,10 @@ set encoding=utf-8          " force encoding to utf-8 (powerline)
 set colorcolumn=80          " put an ominous gray line at column 80. 
 highlight colorcolumn ctermbg=233
 
-vnoremap < <gv              " better unindenting (don't lose selection)
-vnoremap > >gv              " better indenting (ditto)
-
 autocmd BufWritePre *.py :%s/\s\+$//e   " remove trailing whitespace on .py files
 
 "" au BufWritePost .vimrc so ~/.vimrc   " auto-reload .vimrc on save
 let MRU_Open_File_Use_Tabs=1            " open files in new tabs in MRU
-
 
 let mapleader = ","         " remap the leader key
 
@@ -51,3 +47,13 @@ let mapleader = ","         " remap the leader key
 map <Leader>v :tabe ~/.vimrc<cr>    " open .vimrc in a new tab
 map <Leader>gs :Gstatus<cr>         " get git status (fugitive plugin)
 map <Leader>n :NERDTree<cr>         " open Nerdtree
+
+" ==============
+" Key remappings
+" ==============
+vnoremap < <gv              " better unindenting (don't lose selection)
+vnoremap > >gv              " better indenting (ditto)
+map <up> <nop>              " disable up arrow key
+map <down> <nop>            " disable down arrow key
+map <left> <nop>            " disable left arrow key
+map <right> <nop>           " disable right arrow key
