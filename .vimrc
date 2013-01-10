@@ -58,8 +58,9 @@ set colorcolumn=80
 highlight colorcolumn ctermbg=233
 " remove trailing whitespace in .py files
 autocmd BufWritePre *.py :%s/\s\+$//e
-" auto-reload .vimrc on save
-"" au BufWritePost .vimrc so ~/.vimrc
+" auto-reload .vimrc and Powerline after saving
+autocmd BufWritePost .vimrc so ~/.vimrc
+autocmd BufWritePost .vimrc call Pl#Load() 
 " open files in new tab (MRU plugin)
 let MRU_Open_File_Use_Tabs=1
 " remap the leader key
@@ -76,6 +77,10 @@ map <Leader>v :tabe ~/.vimrc<cr>
 map <Leader>gs :Gstatus<cr>
 " open NERDTree (plugin)
 map <Leader>n :NERDTree<cr>
+" open MRU (most recently-used files plugin)
+map <Leader>m :MRU<cr>
+" toggle paste mode
+map <Leader>p :set paste!<cr>
 
 
 " ==============
