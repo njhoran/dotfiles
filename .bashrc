@@ -5,9 +5,15 @@
 # that can't tolerate any output.  So make sure this doesn't display
 # anything or bad things will happen !
 
+# Custom paths
 PATH=${PATH}:${HOME}/minecraft:${HOME}/scripts
 
+# set default editor
 export EDITOR="vim"
+
+# for GnuPG
+GPG_TTY=`tty`
+export GPG_TTY
 
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from
