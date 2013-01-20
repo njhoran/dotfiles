@@ -1,5 +1,5 @@
 " ===========================
-" Edmond Burnett's .vimrc
+" .vimrc by Edmond Burnett
 " http://github.com/edburnett
 " ===========================
 
