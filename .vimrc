@@ -1,5 +1,5 @@
 " ===========================
-" .vimrc by Edmond Burnett
+" Edmond Burnett's .vimrc
 " http://github.com/edburnett
 " ===========================
 
@@ -63,7 +63,7 @@ autocmd BufWritePost .vimrc so ~/.vimrc
 autocmd BufWritePost .vimrc call Pl#Load() 
 " open files in new tab (MRU plugin)
 let MRU_Open_File_Use_Tabs=1
-" remap the leader key
+" map the leader key to the comma
 let mapleader = ','
 
 
@@ -81,7 +81,8 @@ map <Leader>n :NERDTree<cr>
 map <Leader>m :MRU<cr>
 " toggle paste mode
 map <Leader>p :set paste!<cr>
-
+" open journal
+map <Leader>j :tabe ~/notes/journal.gpg<cr>
 
 " ==============
 " Key remappings
