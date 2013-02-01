@@ -81,6 +81,8 @@ map <Leader>n :NERDTree<cr>
 map <Leader>m :MRU<cr>
 " toggle paste mode
 map <Leader>p :set paste!<cr>
+" save using sudo
+map <Leader>su :w !sudo tee %<cr>
 " open journal
 map <Leader>j :tabe ~/notes/journal.gpg<cr>
 
