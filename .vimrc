@@ -1,4 +1,3 @@
-" ===========================
 " Edmond Burnett's .vimrc
 " http://github.com/edburnett
 " ===========================
@@ -84,7 +83,10 @@ map <Leader>p :set paste!<cr>
 " save using sudo
 map <Leader>su :w !sudo tee %<cr>
 " open journal
-map <Leader>j :tabe ~/notes/journal.gpg<cr>
+map <Leader>j :tabe ~/notes/journal.gpg<cr>G$
+" open learnedtoday
+map <Leader>l :tabe ~/notes/learned_today<cr>G$
+
 
 " ==============
 " Key remappings
