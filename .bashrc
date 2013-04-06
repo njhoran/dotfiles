@@ -11,6 +11,10 @@ PATH=${PATH}:${HOME}/minecraft:${HOME}/scripts
 # set default editor
 export EDITOR="vim"
 
+# custom aliases
+alias ve="source ENV/bin/activate"
+alias de="deactivate"
+
 # for GnuPG
 GPG_TTY=`tty`
 export GPG_TTY
