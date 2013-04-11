@@ -9,7 +9,8 @@ syntax on
 " enable file type determination
 filetype indent plugin on
 " set colour scheme
-colorscheme xoria256
+" colorscheme xoria256
+colorscheme jellybeans
 " 256 colors
 set t_Co=256
 " Yeah, so... I forget what this does
@@ -54,7 +55,8 @@ set laststatus=2
 set encoding=utf-8
 " put an ominous gray/#233 line at column 80
 set colorcolumn=80
-highlight colorcolumn ctermbg=233
+" color below was 233
+highlight colorcolumn ctermbg=232
 " remove trailing whitespace in .py files
 autocmd BufWritePre *.py :%s/\s\+$//e
 " auto-reload .vimrc and Powerline after saving
@@ -64,6 +66,8 @@ autocmd BufWritePost .vimrc call Pl#Load()
 let MRU_Open_File_Use_Tabs=1
 " map the leader key to the comma
 let mapleader = ','
+" temporarily disable vim-jedi display of function definitions (slowdown)
+let g:jedi#show_function_definition = 0
 
 
 " =============
