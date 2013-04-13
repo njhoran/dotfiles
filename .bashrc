@@ -12,6 +12,7 @@ PATH=${PATH}:${HOME}/minecraft:${HOME}/scripts
 export EDITOR="vim"
 
 # custom aliases
+alias virtualenv="/usr/bin/virtualenv2"
 alias ve="source ENV/bin/activate"
 alias de="deactivate"
 
