@@ -9,8 +9,9 @@ syntax on
 " enable file type determination
 filetype indent plugin on
 " set colour scheme
-" colorscheme xoria256
-colorscheme jellybeans
+colorscheme xoria256
+" colorscheme jellybeans
+" colorscheme gruvbox
 " 256 colors
 set t_Co=256
 " Yeah, so... I forget what this does
@@ -23,6 +24,8 @@ set nocompatible
 set autoindent
 " ignore case in search patterns
 set ic
+" do case-sensitive search if a character is uppercase
+set smartcase
 " highlight search matches
 set hls
 " don't create backup files
@@ -84,6 +87,8 @@ map <Leader>n :NERDTree<cr>
 map <Leader>m :MRU<cr>
 " toggle paste mode
 map <Leader>p :set paste!<cr>
+" turn off search highlight
+map <Leader>h :nohlsearch<cr>
 " save using sudo
 map <Leader>su :w !sudo tee %<cr>
 " open journal
