@@ -22,6 +22,8 @@ set nu
 set nocompatible
 " autoindenting on
 set autoindent
+" set folding method to indent (works well for python)
+" set foldmethod=indent
 " ignore case in search patterns
 set ic
 " do case-sensitive search if a character is uppercase
@@ -82,7 +84,7 @@ map <Leader>v :tabe ~/.vimrc<cr>
 " retrieve git status of current repo (fugitive plugin)
 map <Leader>gs :Gstatus<cr>
 " open NERDTree (plugin)
-map <Leader>n :NERDTree<cr>
+map <Leader>t :NERDTree<cr>
 " open MRU (most recently-used files plugin)
 map <Leader>m :MRU<cr>
 " toggle paste mode
