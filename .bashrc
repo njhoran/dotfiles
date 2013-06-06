@@ -15,6 +15,7 @@ export EDITOR="vim"
 alias virtualenv="/usr/bin/virtualenv2"
 alias ve="source ENV/bin/activate"
 alias de="deactivate"
+alias fd="cd ~/dev/frienddaemon"
 
 # for GnuPG
 GPG_TTY=`tty`
