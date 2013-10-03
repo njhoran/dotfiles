@@ -17,6 +17,10 @@ alias ve="source ENV/bin/activate"
 alias de="deactivate"
 alias fd="cd ~/dev/frienddaemon"
 
+# disable ctrl-s XOFF
+stty ixany
+stty ixoff -ixon
+
 # for GnuPG
 GPG_TTY=`tty`
 export GPG_TTY
