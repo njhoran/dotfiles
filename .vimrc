@@ -9,9 +9,8 @@ syntax on
 " enable file type determination
 filetype indent plugin on
 " set colour scheme
-colorscheme xoria256
-" colorscheme jellybeans
-" colorscheme gruvbox
+" colorscheme xoria256
+colorscheme bubblegum
 " 256 colors
 set t_Co=256
 " Yeah, so... I forget what this does
@@ -72,7 +71,7 @@ let MRU_Open_File_Use_Tabs=1
 " map the leader key to the comma
 let mapleader = ','
 " temporarily disable vim-jedi display of function definitions (slowdown)
-let g:jedi#show_function_definition = 0
+" let g:jedi#show_call_signatures = 0
 
 
 " =============
@@ -84,7 +83,7 @@ map <Leader>v :tabe ~/.vimrc<cr>
 " retrieve git status of current repo (fugitive plugin)
 map <Leader>gs :Gstatus<cr>
 " open NERDTree (plugin)
-map <Leader>t :NERDTree<cr>
+map <Leader>n :NERDTree<cr>
 " open MRU (most recently-used files plugin)
 map <Leader>m :MRU<cr>
 " toggle paste mode
@@ -97,6 +96,8 @@ map <Leader>su :w !sudo tee %<cr>
 map <Leader>j :tabe ~/notes/journal.gpg<cr>G$
 " open learnedtoday
 map <Leader>l :tabe ~/notes/learned_today<cr>G$
+" get a quickfix of TODO notes from all python files in working directory
+map <Leader>t :noautocmd vimgrep /TODO/j **/*.py<cr>:cw<cr>
 
 
 " ==============
