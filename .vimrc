@@ -59,6 +59,8 @@ set laststatus=2
 set encoding=utf-8
 " put an ominous gray/#233 line at column 80
 set colorcolumn=80
+" ignore patterns (for vimgrep, etc)
+set wildignore+=ENV/**
 " color below was 233
 highlight colorcolumn ctermbg=232
 " remove trailing whitespace in .py files
@@ -72,6 +74,7 @@ let MRU_Open_File_Use_Tabs=1
 let mapleader = ','
 " temporarily disable vim-jedi display of function definitions (slowdown)
 " let g:jedi#show_call_signatures = 0
+
 
 
 " =============
