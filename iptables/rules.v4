@@ -1,4 +1,6 @@
-# Basic IPTABLES stateful firewall template
+# Basic iptables stateful firewall template that uses SSHGuard to detect and
+# block brute force attacks on common services.
+# 
 # github.com/edburnett/dotfiles
 
 *filter
