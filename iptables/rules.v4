@@ -34,7 +34,7 @@
 # sshguard
 -A INPUT -j sshguard
 
-# allowed incoming ports/services
+# allowed incoming ports/services - uncomment only what you need to survive
 -A INPUT -p tcp --dport 22 -j ACCEPT
 #-A INPUT -p tcp --dport 25 -j ACCEPT
 #-A INPUT -p udp --dport 25 -j ACCEPT
